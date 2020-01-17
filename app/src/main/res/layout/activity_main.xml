@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/line" />
+
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:layout_above="@id/bottom_view"
+        android:background="@color/white" />
+
+    <com.example.green.customs.MyBottomView
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp_1"
+        app:bottomNum="5"
+        app:bottomTextSize="@dimen/sp_6"
+        app:changeDrawable="true"
+        app:changeTextColor="true"
+        app:imageSelectedFifth="@mipmap/mine_s"
+        app:imageSelectedFirst="@mipmap/home_s"
+        app:imageSelectedFourth="@mipmap/shop_s"
+        app:imageSelectedSecond="@mipmap/store_s"
+        app:imageSelectedThird="@mipmap/class_s"
+        app:imageUnSelectedFifth="@mipmap/mine_us"
+        app:imageUnSelectedFirst="@mipmap/home_us"
+        app:imageUnSelectedFourth="@mipmap/shop_us"
+        app:imageUnSelectedSecond="@mipmap/store_us"
+        app:imageUnSelectedThird="@mipmap/class_us"
+        app:textFifth="@string/mine"
+        app:textFirst="@string/homepage"
+        app:textFourth="@string/shop"
+        app:textSecond="@string/store"
+        app:textSelectedColor="@color/app_theme_color"
+        app:textThird="@string/classify"
+        app:textUnSelectedColor="@color/black" />
+
+</RelativeLayout>

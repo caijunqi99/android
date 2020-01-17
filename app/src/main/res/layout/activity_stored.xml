@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.mine.wallet.StoredActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/c_27b28b"
+        android:minHeight="?attr/actionBarSize">
+
+        <include layout="@layout/layout_top_login_back" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/rl_jiang"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_150"
+        android:layout_below="@id/toolbar"
+        android:background="@mipmap/chuzhi_bg">
+
+        <RelativeLayout
+            android:id="@+id/rl_jiangjin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_11">
+
+            <ImageView
+                android:id="@+id/jiangjin_iv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_16"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/bonus" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_7"
+                android:layout_toRightOf="@id/jiangjin_iv"
+                android:text="储值卡"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_13" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/jiang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_jiangjin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_20"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_25"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_chongzhi"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_54"
+        android:layout_below="@id/rl_jiang"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/dp_17"
+            android:layout_height="@dimen/dp_17"
+            android:clickable="true"
+            android:src="@mipmap/iv_chongzhi" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="充值"
+            android:textColor="@color/c_242424"
+            android:textSize="@dimen/dp_15" />
+    </LinearLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/SmartRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_chongzhi"
+        android:layout_marginTop="@dimen/dp_7">
+
+        <com.scwang.smartrefresh.header.MaterialHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="收支记录" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/jiang_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv"
+                android:layout_marginLeft="@dimen/dp_10" />
+        </RelativeLayout>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</RelativeLayout>

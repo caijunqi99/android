@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: cn.yc:YCStatusBarLib-1.3.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/YCStatusBarLib-1.3.1.aar/6a00fcd3e4b14b0b25d4771bdef7b8a0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/YCStatusBarLib-1.3.1.aar/6a00fcd3e4b14b0b25d4771bdef7b8a0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.yc/YCStatusBarLib/1.3.1/c7260e6b6c5e955dc14fe66dc73dcde6c8ddd455/YCStatusBarLib-1.3.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

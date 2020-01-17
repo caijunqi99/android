@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.mine.wallet.WithdrawActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize">
+
+            <include layout="@layout/layout_top_action_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="提现"
+                android:textColor="@color/c_242424"
+                android:textSize="@dimen/dp_15" />
+
+            <TextView
+                android:id="@+id/tixian_record"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_40"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/dp_10"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="提现记录"
+                android:textColor="@color/c_242424" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/tixian_card"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_121"
+                android:layout_marginHorizontal="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_13"
+                android:background="@mipmap/tixian_bg">
+
+                <TextView
+                    android:id="@+id/kezhuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_21"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:text="可转积分"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dp_11" />
+
+                <TextView
+                    android:id="@+id/jifen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/kezhuan"
+                    android:layout_marginLeft="@dimen/dp_21"
+                    android:layout_marginTop="@dimen/dp_7"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dp_22"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/low_withdraw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/dp_21"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dp_10" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tixianjifen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tixian_card"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_27"
+                android:text="提现积分"
+                android:textColor="@color/c_242424"
+                android:textSize="@dimen/dp_12" />
+
+            <TextView
+                android:id="@+id/all_jifen"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_30"
+                android:layout_below="@id/tixian_card"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_28"
+                android:layout_marginRight="@dimen/dp_10"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:text="全部"
+                android:textColor="@color/c_242424"
+                android:textSize="@dimen/dp_12" />
+
+            <EditText
+                android:id="@+id/et_jifen"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_43"
+                android:layout_below="@+id/tixianjifen"
+                android:layout_marginHorizontal="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_17"
+                android:background="@drawable/top_up_bg"
+                android:gravity="left|center"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:paddingHorizontal="@dimen/dp_18"
+                android:textColor="@color/c_242424" />
+
+            <TextView
+                android:id="@+id/procedure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_jifen"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:textColor="@color/app_theme_color"
+                android:textSize="@dimen/dp_12" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_yanzheng"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_39"
+            android:layout_below="@id/rl"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:text="验证码"
+                android:textColor="@color/c_242424"
+                android:textSize="@dimen/dp_12" />
+
+            <EditText
+                android:id="@+id/et_code"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/acquire_yanzheng"
+                android:layout_toRightOf="@id/tv_code"
+                android:background="@null"
+                android:hint="输入验证码"
+                android:inputType="number"
+                android:paddingLeft="@dimen/dp_29"
+                android:textSize="@dimen/dp_12" />
+
+            <TextView
+                android:id="@+id/acquire_yanzheng"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_16"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="获取验证码"
+                android:textColor="@color/c_27b28b"
+                android:textSize="@dimen/dp_12" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/bt_withdraw"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_37"
+            android:layout_below="@id/rl_yanzheng"
+            android:layout_marginHorizontal="@dimen/dp_48"
+            android:layout_marginTop="@dimen/dp_35"
+            android:background="@drawable/login_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="提现"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_12" />
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>

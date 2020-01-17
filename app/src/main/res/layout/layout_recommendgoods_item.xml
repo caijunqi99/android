@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/goods_card"
+    android:layout_width="@dimen/dp_166"
+    android:layout_height="@dimen/dp_194"
+    android:layout_marginRight="@dimen/dp_7"
+    android:layout_marginBottom="@dimen/dp_7"
+    android:background="@drawable/recommend_item_shape">
+
+
+    <ImageView
+        android:id="@+id/goods_iv"
+        android:layout_width="@dimen/dp_146"
+        android:layout_height="@dimen/dp_107"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/goods_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/goods_iv"
+        android:layout_marginHorizontal="@dimen/dp_17"
+        android:layout_marginTop="@dimen/dp_11"
+        android:ellipsize="end"
+        android:maxEms="10"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dp_13"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/goods_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp_17"
+        android:layout_marginBottom="@dimen/dp_11"
+        android:maxLength="15"
+        android:textColor="@color/red"
+        android:textSize="@dimen/dp_13"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/goods_preprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp_18"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:singleLine="true"
+        android:textColor="@color/price_gray"
+        android:textSize="@dimen/dp_13" />
+</RelativeLayout>
+

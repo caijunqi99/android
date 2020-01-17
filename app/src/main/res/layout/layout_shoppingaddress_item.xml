@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_address"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/dp_10">
+
+
+    <TextView
+        android:id="@+id/recipients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/c_242424"
+        android:textSize="@dimen/dp_13" />
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_50"
+        android:layout_toRightOf="@id/recipients"
+        android:textColor="@color/c_242424"
+        android:textSize="@dimen/dp_13" />
+
+    <TextView
+        android:id="@+id/area_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recipients"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textColor="@color/c_242424"
+        android:textSize="@dimen/dp_13" />
+
+    <TextView
+        android:id="@+id/address_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recipients"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_toLeftOf="@+id/rl_editor"
+        android:layout_toRightOf="@id/area_info"
+        android:textColor="@color/c_242424"
+        android:textSize="@dimen/dp_13" />
+
+    <TextView
+        android:id="@+id/default_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/default_address"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dp_10"
+        android:paddingVertical="@dimen/dp_5"
+        android:text="默认"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp_12" />
+
+    <RelativeLayout
+        android:id="@+id/rl_editor"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_40"
+        android:layout_below="@id/default_address"
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="编辑"
+            android:textColor="@color/c_242424"
+            android:textSize="@dimen/dp_14" />
+    </RelativeLayout>
+
+</RelativeLayout>
+

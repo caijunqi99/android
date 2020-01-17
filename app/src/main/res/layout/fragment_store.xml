@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.fragment.StoreFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.androidkun.xtablayout.XTabLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_47"
+        android:layout_marginLeft="@dimen/dp_23"
+        android:layout_marginTop="@dimen/dp_25"
+        android:elevation="@dimen/dp_1"
+        app:xTabIndicatorColor="#28B28B"
+        app:xTabIndicatorWidth="@dimen/dp_54"
+        app:xTabMode="scrollable"
+        app:xTabSelectedTextColor="#28B28B"
+        app:xTabSelectedTextSize="@dimen/dp_15"
+        app:xTabTextColor="#CBCBCB"
+        app:xTabTextSelectedBold="false"
+        app:xTabTextSize="@dimen/dp_12" />
+
+    <RelativeLayout
+        android:id="@+id/search_store"
+        android:layout_width="@dimen/dp_310"
+        android:layout_height="@dimen/dp_27"
+        android:layout_below="@id/tab"
+        android:layout_marginHorizontal="@dimen/dp_25"
+        android:layout_marginTop="@dimen/dp_5"
+        android:background="@drawable/search_view">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_13"
+            android:text="搜索商品"
+            android:textColor="@color/c_cbcbcb"
+            android:textSize="@dimen/dp_11" />
+
+        <ImageView
+            android:layout_width="@dimen/dp_11"
+            android:layout_height="@dimen/dp_11"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:src="@mipmap/store_search" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_store" />
+</RelativeLayout>

@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_home_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.fragment.HomeFragment">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_theme_color"
+        android:minHeight="?attr/actionBarSize">
+        <!--搜索-->
+        <RelativeLayout
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_search"
+                android:layout_width="@dimen/dp_303"
+                android:layout_height="@dimen/dp_31"
+                android:background="@drawable/homepage_searchview">
+
+                <ImageView
+                    android:id="@+id/search_icon"
+                    android:layout_width="@dimen/dp_19"
+                    android:layout_height="@dimen/dp_19"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:src="@mipmap/search" />
+
+                <TextView
+                    android:id="@+id/search_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_14"
+                    android:layout_toRightOf="@+id/search_icon"
+                    android:text="搜索商品"
+                    android:textColor="@color/c_E7E7E7"
+                    android:textSize="@dimen/dp_14" />
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/information"
+                android:layout_width="@dimen/dp_21"
+                android:layout_height="@dimen/dp_21"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_toRightOf="@+id/rl_search"
+                android:src="@mipmap/mute" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/SmartRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <com.scwang.smartrefresh.header.MaterialHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_160"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/bannerbg" />
+
+                <com.youth.banner.Banner
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_150"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="@dimen/dp_10"
+                    app:image_scale_type="fit_xy" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/option"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/banner"
+                    android:layout_marginHorizontal="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_14" />
+
+                <ImageView
+                    android:id="@+id/adv_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_100"
+                    android:layout_below="@id/option"
+                    android:scaleType="fitXY" />
+
+                <RelativeLayout
+                    android:id="@+id/cuxiao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/adv_img"
+                    android:background="@color/c_F8784E">
+                    <!--超值 热品-->
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dp_13"
+                        android:layout_marginTop="@dimen/dp_9"
+                        app:cardCornerRadius="@dimen/dp_10">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <View
+                                    android:id="@+id/line"
+                                    android:layout_width="@dimen/dp_1"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@color/gray" />
+
+                                <TextView
+                                    android:id="@+id/name1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="@dimen/dp_16"
+                                    android:layout_marginTop="@dimen/dp_10"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/dp_15"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/name2"
+                                    android:layout_width="@dimen/dp_59"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/dp_5"
+                                    android:layout_marginTop="@dimen/dp_13"
+                                    android:layout_toRightOf="@id/name1"
+                                    android:background="@drawable/boutique_bg"
+                                    android:gravity="center"
+                                    android:paddingVertical="@dimen/dp_4"
+                                    android:textColor="@color/app_theme_color"
+                                    android:textSize="@dimen/dp_9"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/name3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginLeft="@dimen/dp_16"
+                                    android:layout_marginTop="@dimen/dp_10"
+                                    android:layout_toRightOf="@id/line"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/dp_15"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/name4"
+                                    android:layout_width="@dimen/dp_59"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginLeft="@dimen/dp_5"
+                                    android:layout_marginTop="@dimen/dp_13"
+                                    android:layout_marginRight="@dimen/dp_30"
+                                    android:layout_toRightOf="@id/name3"
+                                    android:background="@drawable/seckill_bg"
+                                    android:gravity="center"
+                                    android:paddingVertical="@dimen/dp_4"
+                                    android:textColor="@color/red"
+                                    android:textSize="@dimen/dp_9"
+                                    android:textStyle="bold" />
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/boutique"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@id/name1"
+                                    android:layout_marginTop="@dimen/dp_14"
+                                    android:layout_toLeftOf="@id/line" />
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/seckill"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@id/name1"
+                                    android:layout_marginTop="@dimen/dp_14"
+                                    android:layout_toRightOf="@id/line" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                    <!--热卖商品-->
+                    <RelativeLayout
+                        android:id="@+id/card2"
+                        android:layout_width="@dimen/dp_167"
+                        android:layout_height="@dimen/dp_141"
+                        android:layout_below="@+id/card1"
+                        android:layout_marginVertical="@dimen/dp_7"
+                        android:layout_marginLeft="@dimen/dp_13"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_15"
+                            android:layout_height="@dimen/dp_16"
+                            android:layout_margin="@dimen/dp_5"
+                            android:src="@mipmap/top_one"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/top_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:background="@color/white"
+                            android:scaleType="fitXY" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_107"
+                            android:layout_height="@dimen/dp_22"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/dp_14"
+                            android:src="@mipmap/hot"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                    <!--天然山货-->
+                    <RelativeLayout
+                        android:id="@+id/card3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_67"
+                        android:layout_below="@id/card1"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_marginTop="@dimen/dp_7"
+                        android:layout_marginRight="@dimen/dp_13"
+                        android:layout_toRightOf="@id/card2"
+                        android:background="@color/white">
+
+
+                        <TextView
+                            android:id="@+id/up_promotion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_marginTop="@dimen/dp_7"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_9"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/up_promotion_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_3"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:layout_toRightOf="@id/up_promotion"
+                            android:textSize="@dimen/dp_6" />
+
+                        <ImageView
+                            android:id="@+id/iv_1"
+                            android:layout_width="@dimen/dp_41"
+                            android:layout_height="@dimen/dp_41"
+                            android:layout_below="@id/up_promotion"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_marginTop="@dimen/dp_6"
+                            android:layout_marginBottom="@dimen/dp_4" />
+
+                        <ImageView
+                            android:id="@+id/iv_2"
+                            android:layout_width="@dimen/dp_41"
+                            android:layout_height="@dimen/dp_41"
+                            android:layout_below="@id/up_promotion"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_marginTop="@dimen/dp_6"
+                            android:layout_marginBottom="@dimen/dp_4"
+                            android:layout_toRightOf="@id/iv_1" />
+
+                        <ImageView
+                            android:id="@+id/iv_3"
+                            android:layout_width="@dimen/dp_41"
+                            android:layout_height="@dimen/dp_41"
+                            android:layout_below="@id/up_promotion"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_marginTop="@dimen/dp_6"
+                            android:layout_marginBottom="@dimen/dp_4"
+                            android:layout_toRightOf="@id/iv_2" />
+                    </RelativeLayout>
+                    <!--海鲜大咖-->
+                    <RelativeLayout
+                        android:id="@+id/card4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_67"
+                        android:layout_below="@id/card3"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_marginTop="@dimen/dp_6"
+                        android:layout_marginRight="@dimen/dp_13"
+                        android:layout_marginBottom="@dimen/dp_7"
+                        android:layout_toRightOf="@id/card2"
+                        android:background="@color/white">
+
+
+                        <TextView
+                            android:id="@+id/down_promotion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_marginTop="@dimen/dp_7"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dp_9"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/down_promotion_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_3"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:layout_toRightOf="@id/down_promotion"
+                            android:textSize="@dimen/dp_6" />
+
+                        <ImageView
+                            android:id="@+id/iv_4"
+                            android:layout_width="@dimen/dp_41"
+                            android:layout_height="@dimen/dp_41"
+                            android:layout_below="@id/down_promotion"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_marginTop="@dimen/dp_6"
+                            android:layout_marginBottom="@dimen/dp_4" />
+
+                        <ImageView
+                            android:id="@+id/iv_5"
+                            android:layout_width="@dimen/dp_41"
+                            android:layout_height="@dimen/dp_41"
+                            android:layout_below="@id/down_promotion"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_marginTop="@dimen/dp_6"
+                            android:layout_marginBottom="@dimen/dp_4"
+                            android:layout_toRightOf="@id/iv_4" />
+
+                        <ImageView
+                            android:id="@+id/iv_6"
+                            android:layout_width="@dimen/dp_41"
+                            android:layout_height="@dimen/dp_41"
+                            android:layout_below="@id/down_promotion"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_marginTop="@dimen/dp_6"
+                            android:layout_marginBottom="@dimen/dp_4"
+                            android:layout_toRightOf="@id/iv_5" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/more_goods"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/cuxiao"
+                    android:layout_marginTop="@dimen/dp_7"
+                    android:background="@color/gray"
+                    android:paddingHorizontal="@dimen/dp_11" />
+
+            </RelativeLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</RelativeLayout>
+

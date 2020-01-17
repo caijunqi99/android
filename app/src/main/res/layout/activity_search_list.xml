@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.SearchListActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize">
+
+        <include layout="@layout/layout_top_action_back" />
+
+        <RelativeLayout
+            android:id="@+id/rl_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_29"
+            android:layout_below="@id/toolbar"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_20"
+            android:background="@mipmap/search_bg">
+
+            <ImageView
+                android:layout_width="@dimen/dp_12"
+                android:layout_height="@dimen/dp_12"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:src="@mipmap/store_search" />
+
+            <TextView
+                android:id="@+id/keyword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:background="@null"
+                android:hint="搜索商品"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/c_242424"
+                android:textSize="@dimen/dp_12" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <com.androidkun.xtablayout.XTabLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_38"
+        android:layout_below="@id/toolbar"
+        android:background="@color/white"
+        android:elevation="@dimen/dp_1"
+        app:xTabIndicatorColor="@color/c_F8784E"
+        app:xTabIndicatorHeight="@dimen/dp_2"
+        app:xTabIndicatorWidth="@dimen/dp_25"
+        app:xTabMode="fixed"
+        app:xTabSelectedTextColor="@color/c_242424"
+        app:xTabSelectedTextSize="@dimen/dp_14"
+        app:xTabTextBold="true"
+        app:xTabTextColor="@color/c_aeaeae"
+        app:xTabTextSelectedBold="false"
+        app:xTabTextSize="@dimen/dp_12" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tab"
+        android:background="@color/white" />
+</RelativeLayout>

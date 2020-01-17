@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.mine.wallet.TopUpActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize">
+
+            <include layout="@layout/layout_top_action_back" />
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="413dp"
+            android:layout_below="@id/toolbar"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:text="充值"
+                android:textColor="@color/c_242424"
+                android:textSize="@dimen/dp_18" />
+
+            <RelativeLayout
+                android:id="@+id/rl_info"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_157"
+                android:layout_marginHorizontal="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_50"
+                android:background="@drawable/top_up_bg">
+                <!--开户名-->
+                <RelativeLayout
+                    android:id="@+id/kaihuming"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_52">
+
+                    <TextView
+                        android:id="@+id/tv_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:text="开户名"
+                        android:textColor="@color/c_242424"
+                        android:textSize="@dimen/dp_12" />
+
+                    <EditText
+                        android:id="@+id/et_huming"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_50"
+                        android:layout_marginLeft="@dimen/dp_55"
+                        android:background="@null"
+                        android:gravity="right|center"
+                        android:hint="请输入"
+                        android:paddingRight="@dimen/dp_20"
+                        android:textSize="@dimen/dp_12" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:layout_below="@+id/et_huming"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:background="@color/c_cbcbcb" />
+
+                </RelativeLayout>
+                <!--银行-->
+                <RelativeLayout
+                    android:id="@+id/bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_52"
+                    android:layout_below="@id/kaihuming">
+
+                    <TextView
+                        android:id="@+id/tv_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:text="银行"
+                        android:textColor="@color/c_242424"
+                        android:textSize="@dimen/dp_12" />
+
+                    <EditText
+                        android:id="@+id/et_bank"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_50"
+                        android:layout_marginLeft="@dimen/dp_55"
+                        android:background="@null"
+                        android:gravity="right|center"
+                        android:hint="请输入"
+                        android:paddingRight="@dimen/dp_20"
+                        android:textSize="@dimen/dp_12" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_1"
+                        android:layout_below="@+id/et_bank"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:background="@color/c_cbcbcb" />
+
+                </RelativeLayout>
+                <!--卡号-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_52"
+                    android:layout_below="@id/bank">
+
+                    <TextView
+                        android:id="@+id/tv_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:text="卡号"
+                        android:textColor="@color/c_242424"
+                        android:textSize="@dimen/dp_12" />
+
+                    <EditText
+                        android:id="@+id/et_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_50"
+                        android:layout_marginLeft="@dimen/dp_55"
+                        android:background="@null"
+                        android:gravity="right|center"
+                        android:hint="请输入"
+                        android:paddingRight="@dimen/dp_20"
+                        android:textSize="@dimen/dp_12" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_beizhu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_info"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_27"
+                android:text="转账备注："
+                android:textColor="@color/c_999999"
+                android:textSize="@dimen/dp_12" />
+
+            <EditText
+                android:id="@+id/et_remark"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_117"
+                android:layout_below="@id/tv_beizhu"
+                android:layout_marginHorizontal="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_13"
+                android:background="@drawable/remark_bg" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/bt_top_up"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_below="@id/rl"
+            android:layout_marginHorizontal="@dimen/dp_56"
+            android:layout_marginTop="@dimen/dp_50"
+            android:background="@drawable/login_bg"
+            android:text="确认充值"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_14" />
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>

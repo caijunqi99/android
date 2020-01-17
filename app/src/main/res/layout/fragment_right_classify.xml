@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.fragment.classify.RightClassifyFragment">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.youth.banner.Banner
+                android:id="@+id/adv_banner"
+                android:layout_width="@dimen/dp_240"
+                android:layout_height="@dimen/dp_80"
+                android:layout_centerHorizontal="true"
+                app:image_scale_type="fit_xy" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/right_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/adv_banner"
+                android:layout_marginHorizontal="@dimen/dp_14"
+                android:layout_marginTop="@dimen/dp_17"
+                android:background="@color/white" />
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

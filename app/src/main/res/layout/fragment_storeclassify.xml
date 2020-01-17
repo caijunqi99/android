@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.store.StoreclassifyFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <com.androidkun.xtablayout.XTabLayout
+        android:id="@+id/tab"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_35"
+        android:layout_marginLeft="@dimen/dp_25"
+        android:layout_marginTop="@dimen/dp_2"
+        android:elevation="@dimen/dp_1"
+        app:xTabIndicatorHeight="@dimen/dp_0"
+        app:xTabIndicatorWidth="@dimen/dp_0"
+        app:xTabMode="scrollable"
+        app:xTabSelectedTextColor="#28B28B"
+        app:xTabSelectedTextSize="@dimen/dp_12"
+        app:xTabTextColor="@color/black"
+        app:xTabTextSelectedBold="false"
+        app:xTabTextSize="@dimen/dp_12" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tab" />
+
+</RelativeLayout>

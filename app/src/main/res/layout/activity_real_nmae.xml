@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.mine.wallet.RealNmaeActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize">
+
+        <include layout="@layout/layout_top_action_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="实名认证"
+            android:textColor="@color/c_242424"
+            android:textSize="@dimen/dp_15" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_109"
+
+                android:background="@mipmap/identity_bg" />
+
+            <RelativeLayout
+                android:id="@+id/person_info"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_143"
+                android:layout_marginTop="@dimen/dp_97"
+                android:background="@drawable/identity_info_bg">
+
+                <TextView
+                    android:id="@+id/basic_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_17"
+                    android:layout_marginTop="@dimen/dp_21"
+                    android:text="基本信息"
+                    android:textColor="@color/c_242424"
+                    android:textSize="@dimen/dp_12" />
+                <!--真实姓名-->
+                <RelativeLayout
+                    android:id="@+id/rl_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_below="@id/basic_info"
+                    android:layout_marginLeft="@dimen/dp_17"
+                    android:layout_marginTop="@dimen/dp_10">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="真实姓名"
+                        android:textColor="@color/c_242424"
+                        android:textSize="@dimen/dp_12" />
+
+                    <EditText
+                        android:id="@+id/et_Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/name"
+                        android:background="@null"
+                        android:hint="请输入真实姓名"
+                        android:paddingLeft="@dimen/dp_17"
+                        android:textColor="@color/c_242424"
+                        android:textColorHint="@color/c_999999"
+                        android:textSize="@dimen/dp_11" />
+
+                </RelativeLayout>
+
+                <!--身份证号-->
+                <RelativeLayout
+                    android:id="@+id/rl_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_below="@id/rl_name"
+                    android:layout_marginLeft="@dimen/dp_17">
+
+                    <TextView
+                        android:id="@+id/number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="身份证号"
+                        android:textColor="@color/c_242424"
+                        android:textSize="@dimen/dp_12" />
+
+                    <EditText
+                        android:id="@+id/et_IDnumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/number"
+                        android:background="@null"
+                        android:digits="0123456789xX"
+                        android:hint="15-18位身份证号"
+                        android:paddingLeft="@dimen/dp_17"
+                        android:textColor="@color/c_242424"
+                        android:textColorHint="@color/c_999999"
+                        android:textSize="@dimen/dp_11" />
+
+                </RelativeLayout>
+
+                <!--所在地区-->
+                <RelativeLayout
+                    android:id="@+id/rl_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_below="@id/rl_number"
+                    android:layout_marginLeft="@dimen/dp_17">
+
+                    <TextView
+                        android:id="@+id/area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="所在地区"
+                        android:textColor="@color/c_242424"
+                        android:textSize="@dimen/dp_12" />
+
+                    <TextView
+                        android:id="@+id/tv_Area"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/area"
+                        android:gravity="center_vertical"
+                        android:hint="请选择地区"
+                        android:paddingLeft="@dimen/dp_17"
+                        android:textColor="@color/c_242424"
+                        android:textColorHint="@color/c_999999"
+                        android:textSize="@dimen/dp_11" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+            <!--身份证照片-->
+            <RelativeLayout
+                android:id="@+id/rl_pic"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_147"
+                android:layout_below="@+id/person_info"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_17"
+                    android:text="身份证照片"
+                    android:textColor="@color/c_242424"
+                    android:textSize="@dimen/dp_12" />
+
+                <ImageView
+                    android:id="@+id/front_pic"
+                    android:layout_width="@dimen/dp_150"
+                    android:layout_height="@dimen/dp_85"
+                    android:layout_marginLeft="@dimen/dp_17"
+                    android:layout_marginTop="@dimen/dp_45"
+                    android:clickable="true"
+                    android:src="@mipmap/front_photo" />
+
+
+                <ImageView
+                    android:id="@+id/reverse_pic"
+                    android:layout_width="@dimen/dp_150"
+                    android:layout_height="@dimen/dp_85"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_45"
+                    android:layout_marginRight="@dimen/dp_17"
+                    android:clickable="true"
+                    android:src="@mipmap/reverse_photo" />
+            </RelativeLayout>
+            <!--手持身份证照片-->
+            <RelativeLayout
+                android:id="@+id/rl_hand_photo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_125"
+                android:layout_below="@+id/rl_pic"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:text="手持身份证照片"
+                    android:textColor="@color/c_242424"
+                    android:textSize="@dimen/dp_12" />
+
+                <ImageView
+                    android:id="@+id/hand_photo"
+                    android:layout_width="@dimen/dp_150"
+                    android:layout_height="@dimen/dp_85"
+                    android:layout_marginLeft="@dimen/dp_17"
+                    android:layout_marginTop="@dimen/dp_25"
+                    android:clickable="true"
+                    android:src="@mipmap/hand_pic" />
+
+
+                <ImageView
+                    android:layout_width="@dimen/dp_150"
+                    android:layout_height="@dimen/dp_85"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_25"
+                    android:layout_marginRight="@dimen/dp_17"
+                    android:clickable="true"
+                    android:src="@drawable/hand_photo" />
+            </RelativeLayout>
+            <!--银行卡信息-->
+            <RelativeLayout
+                android:id="@+id/bank_card_info"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_74"
+                android:layout_below="@id/rl_hand_photo"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/white">
+
+                <!--银行名称-->
+                <RelativeLayout
+                    android:id="@+id/rl_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_37"
+                    android:layout_marginLeft="@dimen/dp_17">
+
+                    <TextView
+                        android:id="@+id/bank_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="银行名称"
+                        android:textColor="@color/c_242424"
+                        android:textSize="@dimen/dp_12" />
+
+                    <EditText
+                        android:id="@+id/et_bank_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/bank_name"
+                        android:background="@null"
+                        android:hint="请输入"
+                        android:paddingLeft="@dimen/dp_15"
+                        android:textColor="@color/c_242424"
+                        android:textColorHint="@color/c_999999"
+                        android:textSize="@dimen/dp_11" />
+
+                </RelativeLayout>
+
+                <!--银行名称-->
+                <RelativeLayout
+                    android:id="@+id/rl_bank_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_37"
+                    android:layout_below="@+id/rl_bank"
+                    android:layout_marginLeft="@dimen/dp_17">
+
+                    <TextView
+                        android:id="@+id/bank_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="银行卡账号"
+                        android:textColor="@color/c_242424"
+                        android:textSize="@dimen/dp_12" />
+
+                    <EditText
+                        android:id="@+id/et_bank_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/bank_account"
+                        android:background="@null"
+                        android:hint="请输入"
+                        android:inputType="number"
+                        android:paddingLeft="@dimen/dp_15"
+                        android:textColor="@color/c_242424"
+                        android:textColorHint="@color/c_999999"
+                        android:textSize="@dimen/dp_11" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_commit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_37"
+                android:layout_below="@+id/bank_card_info"
+                android:layout_marginHorizontal="@dimen/dp_48"
+                android:layout_marginTop="@dimen/dp_48"
+                android:layout_marginBottom="@dimen/dp_50"
+                android:background="@drawable/login_bg"
+                android:clickable="true"
+                android:text="提交认证"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_12" />
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

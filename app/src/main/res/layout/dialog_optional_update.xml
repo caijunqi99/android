@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/update_card"
+        android:layout_width="@dimen/dp_269"
+        android:layout_height="@dimen/dp_370"
+        android:background="@mipmap/update_bg">
+
+        <TextView
+            android:layout_width="@dimen/dp_87"
+            android:layout_height="@dimen/dp_24"
+            android:layout_marginLeft="@dimen/dp_17"
+            android:layout_marginTop="@dimen/dp_37"
+            android:text="发现新版本"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/dp_17" />
+
+        <TextView
+            android:id="@+id/Versioncode"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_18"
+            android:layout_marginLeft="@dimen/dp_19"
+            android:layout_marginTop="@dimen/dp_61"
+            android:text="V 1.3.2"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/dp_13" />
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="@dimen/dp_230"
+            android:layout_height="@dimen/dp_123"
+            android:layout_below="@id/Versioncode"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_96"
+            android:text="告知当前状态，信息和解决方法告知当前状态，信息和解决方法告知当前状态，信息和解决方法告知当前状态，信息和解决方法告知当前状态，信息和解决方法告知当前状态，信息和解决方法告知当前状态，信息和解决方法"
+            android:textColor="#FF888888"
+            android:textSize="@dimen/dp_13" />
+
+        <View
+
+            android:layout_width="@dimen/dp_269"
+            android:layout_height="@dimen/dp_1"
+            android:layout_below="@id/Versioncode"
+            android:layout_marginTop="@dimen/dp_246"
+            android:background="#FFE5E5E5" />
+
+
+        <TextView
+            android:id="@+id/tv_later"
+            android:layout_width="@dimen/dp_134"
+            android:layout_height="@dimen/dp_47"
+            android:layout_below="@id/Versioncode"
+            android:layout_marginTop="@dimen/dp_246"
+            android:gravity="center"
+            android:text="稍后更新"
+            android:textColor="#FF000000"
+            android:textSize="@dimen/dp_14" />
+
+        <View
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="@dimen/dp_40"
+            android:layout_below="@id/Versioncode"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_246"
+            android:background="#FFE6E6E6" />
+
+        <TextView
+            android:id="@+id/tv_update"
+            android:layout_width="@dimen/dp_134"
+            android:layout_height="@dimen/dp_47"
+            android:layout_below="@id/Versioncode"
+            android:layout_marginTop="@dimen/dp_246"
+            android:layout_toRightOf="@id/tv_later"
+            android:gravity="center"
+            android:text="马上更新"
+            android:textColor="#FFFE4B4A"
+            android:textSize="@dimen/dp_14" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/update_card"
+        android:layout_marginLeft="@dimen/dp_125"
+        android:layout_marginTop="@dimen/dp_17">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/dp_23"
+            android:layout_height="@dimen/dp_23"
+            android:src="@mipmap/close"
+            android:visibility="invisible" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,124 @@
+apply plugin: 'com.android.application'
+
+android {
+    /*debug {
+        storeFile file('D:\\Greenwallkeystore.jks') // 签名证书文件
+        storePassword 'xEySu#&kB14w9D2'
+        keyAlias = 'key0'
+        keyPassword 'xEySu#&kB14w9D2'
+    }*/
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.example.green"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 2
+        versionName "1.0.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    /*过滤提示重复文件*/
+    packagingOptions {
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:+'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-v4:+'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:27.1.1'
+    // retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit2"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit2"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit2"
+
+    // rxjava
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava2"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxjava2"
+
+    // butterknife
+    implementation "com.jakewharton:butterknife:$butterknife"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknife"
+
+    // glide
+    implementation "com.github.bumptech.glide:glide:$glide"
+
+    // OkHttp
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3"
+    implementation "com.squareup.okhttp3:okhttp:$okhttp3"
+
+    // NetInterceptor拦截器依赖
+    implementation project(':utils')
+    implementation project(':flowlayout-lib')
+
+    // SmartRefreshLayout上拉加载下拉刷新
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-7'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4-7'
+
+    // 轮播图
+    implementation 'com.youth.banner:banner:1.4.10'
+
+    //腾讯MMkv
+    implementation 'com.tencent:mmkv:1.0.22'
+
+    // XTabLayout
+    implementation 'com.androidkun:XTabLayout:1.1.4'
+
+    // Gson解析
+    implementation 'com.google.code.gson:gson:2.2.4'
+
+    // 卡片布局
+    //noinspection GradleCompatible
+    implementation 'com.android.support:cardview-v7:28.0.0'
+
+    // BRVAH官方适配器  https://github.com/CymChad/BaseRecyclerViewAdapterHelper
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.44'
+
+    // fastjson
+    implementation files('libs/fastjson-1.2.41.jar')
+
+    // ImmersionBar沉浸式状态栏 基础依赖包，必须要依赖
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0-beta05'
+
+    //leakcanary
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+
+    // gif 动态图片
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.1'
+
+    //图片选择器
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+
+    // 极光推送
+    implementation files('libs/jpush-android-3.3.4.jar')
+    implementation files('libs/jcore-android-2.1.2.jar')
+
+    // 支付宝支付
+    implementation(name: 'alipaySdk-15.6.5-20190718211148', ext: 'aar')
+    // 微信支付
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+
+    // 曲线图
+    implementation 'com.github.lecho:hellocharts-android:v1.5.8'
+
+    implementation 'cn.yc:YCStatusBarLib:1.3.1'
+}

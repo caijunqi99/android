@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CommonTitle">
+        <attr name="titleText" format="string"/>
+        <attr name="backColor" format="color"/>
+        <attr name="backImage" format="reference"/>
+        <attr name="canBack" format="boolean"/>
+        <attr name="moreImg" format="reference"/>
+        <attr name="moreText" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="Bottom_tab">
+        <attr name="changeDrawable" format="boolean"/>
+        <attr name="bottomNum" format="integer"/>
+        <attr name="changeTextColor" format="boolean"/>
+        <attr name="textSelectedColor" format="color"/>
+        <attr name="textUnSelectedColor" format="color"/>
+        <attr name="bottomTextSize" format="dimension"/>
+        <attr name="textFirst" format="string"/>
+        <attr name="textSecond" format="string"/>
+        <attr name="textThird" format="string"/>
+        <attr name="textFourth" format="string"/>
+        <attr name="textFifth" format="string"/>
+        <attr name="imageSelectedFirst" format="reference"/>
+        <attr name="imageUnSelectedFirst" format="reference"/>
+        <attr name="imageSelectedSecond" format="reference"/>
+        <attr name="imageUnSelectedSecond" format="reference"/>
+        <attr name="imageSelectedThird" format="reference"/>
+        <attr name="imageUnSelectedThird" format="reference"/>
+        <attr name="imageSelectedFourth" format="reference"/>
+        <attr name="imageUnSelectedFourth" format="reference"/>
+        <attr name="imageSelectedFifth" format="reference"/>
+        <attr name="imageUnSelectedFifth" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="RoundImage">
+        <attr name="radius" />
+        <attr name="round_mode" />
+    </declare-styleable>
+
+    <attr name="interval" format="integer"/>
+    <attr name="showIndicator" format="boolean"/>
+    <attr name="orientation" format="enum">
+        <enum name="horizontal" value="0"/>
+        <enum name="vertical" value="1"/>
+    </attr>
+    <attr name="autoPlaying" format="boolean"/>
+    <declare-styleable name="RecyclerViewBannerBase">
+        <attr name="interval"/>
+        <attr name="showIndicator" />
+        <attr name="orientation" />
+        <attr name="autoPlaying"/>
+        <attr name="indicatorSelectedSrc" format="color|reference"/>
+        <attr name="indicatorUnselectedSrc" format="color|reference"/>
+        <attr name="indicatorSpace" format="dimension|reference"/>
+        <attr name="indicatorMarginLeft" format="dimension|reference"/>
+        <attr name="indicatorMarginRight" format="dimension|reference"/>
+        <attr name="indicatorMarginBottom" format="dimension|reference"/>
+        <attr name="indicatorGravity" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="right" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="BannerLayout">
+        <attr name="interval" />
+        <attr name="showIndicator" />
+        <attr name="orientation" />
+        <attr name="autoPlaying"/>
+        <attr name="itemSpace" format="integer"/>
+        <attr name="centerScale" format="float"/>
+        <attr name="moveSpeed" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="ImageViewFillet">
+        <attr name="borderRadius" />
+        <attr name="type" />
+    </declare-styleable>
+    <attr name="borderRadius" format="dimension" />
+    <attr name="type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+
+    <!--自定义图片选择器-->
+    <declare-styleable name="SelectorImageView">
+        <attr name="selector_src" format="reference" /><!--选中的src图片属性-->
+        <attr name="checked" format="boolean" />
+    </declare-styleable>
+</resources>

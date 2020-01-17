@@ -1,0 +1,11 @@
+com.yiyatech.utils
+dimen toast_hover
+drawable background_kitkat_gray
+drawable icon_dark_exit
+drawable icon_dark_info
+id message_textview
+id root_layout
+layout supertoast
+string app_name
+style DefaultRootLayout
+style DefaultText
